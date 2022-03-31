@@ -37,8 +37,40 @@ function scoreCard(error, response, html){
                 let fours=cell[5].textContent;
                 let sixes=cell[6].textContent;
                 // console.log("Name: ", name, "Runs", runs, "Balls", balls,"Four",fours,"Sixes",sixes);
-                processPlayer(name,runs,balls,fours,sixes);
+               // processPlayer(name,runs,balls,fours,sixes);
             }
         }
     }
+}
+    processPlayer('Rohit','15','4','2','4');
+    processPlayer('Virat','50','20','4','3')
+    processPlayer('Rohit','40','20','1','2');
+    console.log(leaderBoard);
+function processPlayer(name, runs, balls, fours, sixes){
+    
+    runs=Number(runs);
+    balls=Number(balls);
+    fours=Number(fours);
+    sixes=Number(sixes);
+    
+    for(let i=0;i<leaderBoard.length;i++){
+        let playerObj=leaderBoard[i];
+        if(playerObj.Name==name){
+            playerObj.Runs+=runs;
+            playerObj.Balls+=balls;
+            playerObj.Fours+=fours;
+            playerObj.Sixes+=sixes;
+            return;
+        }
+    }
+        // if not exist
+        let obj={
+            Name:name,
+            Runs:runs,
+            Balls:balls,
+            Fours:fours,
+            Sixes:sixes
+        }
+        leaderBoard.push(obj);
+    
 }
