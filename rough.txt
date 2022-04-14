@@ -1,0 +1,5 @@
+Main .js is the main file which will generate BatsmenDetail xlsx file ans json file
+So if want to delete the xlsx and json file there will be no issue.
+Aim of this Project was to : fetch the data from espncricinfo website 
+and store the ipl2021 scorecard using all matches detail and finally convert it to readable form that is 
+excel file 
